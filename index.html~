@@ -13,7 +13,7 @@
   
   <script src="https://raw.githack.com/csprh/FSA-VIZ/master/jsonWhole.js"></script>
   <!--<script src="https://unpkg.com/three"></script>-->
-  <script src="https://rawgit.com/mrdoob/three.js/master/examples/jsm/controls/TrackballControls.jss"></script>
+  <!--<script src="https://rawgit.com/mrdoob/three.js/master/examples/jsm/controls/TrackballControls.js"></script>-->
   <script src="https://unpkg.com/three-globe"></script>
   
 <style>
@@ -139,6 +139,7 @@ controller.init();
 <script>
   fetch('./ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries =>
   {
+    import { TrackballControls } from './jsm/controls/TrackballControls.js';	  
     const Globe = new ThreeGlobe()
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
       .polygonsData(countries.features)
@@ -166,7 +167,7 @@ controller.init();
     camera.position.z = 500;
 
     // Add camera controls
-    const tbControls = new THREE.TrackballControls(camera, renderer.domElement);
+    const tbControls = new TrackballControls(camera, renderer.domElement);
     tbControls.minDistance = 101;
     tbControls.rotateSpeed = 5;
     tbControls.zoomSpeed = 0.8;
