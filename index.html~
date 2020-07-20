@@ -55,7 +55,7 @@ a {
 </style>
 </head>
 <body>
-<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction()">Switch</button>
  
 <!--Create a <div> where the globe will be rendered -->
 
