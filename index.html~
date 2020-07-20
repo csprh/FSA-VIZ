@@ -22,9 +22,9 @@
 <button onclick="myFunction()">Try it</button>
  
 <!--Create a <div> where the globe will be rendered -->
-<div id="globalArea"></div>
-<div id="globeViz"></div>
 
+<div id="globeViz"></div>
+<div id="globalArea"></div>
 <script>
 myFunction();
 function myFunction() {
