@@ -1,0 +1,120 @@
+<head>
+    <meta charset="UTF-8">
+    <title>FSA Data Demo</title>
+  <!-- This demo shows how to use opensource library Gio.js to create an interactive 3D globe -->
+  <!-- Know more fancier usage of Gio.js, see: 
+       official website: http://giojs.org  
+       github repo: https://github.com/syt123450/giojs
+-->
+<!--  For more interesting Giojs demo, see Giojs API Codepen Collection: https://codepen.io/collection/DkBobG/  -->
+    <script src="https://rawgit.com/syt123450/giojs/master/examples/js/jquery.min.js"></script>
+    <script src="https://rawgit.com/syt123450/giojs/master/examples/js/three.min.js"></script>
+  <script src="https://rawgit.com/syt123450/giojs/master/build/gio.min.js"></script>
+  
+  <script src="https://raw.githack.com/csprh/FSA-VIZ/master/jsonWhole.js"></script>
+  
+    <!-- load data in this data script -->
+</head>
+<body>
+ 
+<!--Create a <div> where the globe will be rendered -->
+<div id="globalArea"></div>
+<div id="globalArea2"></div>
+</body>
+
+	<script>
+
+		// Get the container to hold the IO globe
+var container = document.getElementById( "globalArea" );
+// Create Gio.controller
+var controller = new GIO.Controller( container );
+//controller.setStyle("magic");
+// Add data
+controller.configure(true);
+controller.configure(
+{
+	"control": {
+		"stats": false,
+		"disableUnmentioned": false,
+		"lightenMentioned": true,
+		"inOnly": false,
+		"outOnly": false,
+		"initCountry": "US",
+		"halo": true,
+		"transparentBackground": false,
+		"autoRotation": false,
+		"rotationRatio": 1
+	},
+	"color": {
+		"surface": 1744048,
+		"selected": 2141154,
+		"in": 16777215,
+		"out": 2141154,
+		"halo": 2141154,
+		"background": 0
+	},
+	"brightness": {
+		"ocean": 0.5,
+		"mentioned": 0.5,
+		"related": 0.5
+	}
+}
+);
+
+
+
+for (let i = 0; i<data.length;i++){
+  data[i].v = data[i].v*10000;
+}
+controller.addData( data );
+
+// Initialize and render the globe
+controller.init();
+
+	</script>
+	
+<script>
+  fetch('./ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries =>
+  {
+    const Globe = new ThreeGlobe()
+      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+      .polygonsData(countries.features)
+      .polygonCapColor(() => 'rgba(200, 0, 0, 0.7)')
+      .polygonSideColor(() => 'rgba(0, 200, 0, 0.1)')
+      .polygonStrokeColor(() => '#111');
+
+    setTimeout(() => Globe.polygonAltitude(() => Math.random()), 4000);
+
+    // Setup renderer
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('globeViz').appendChild(renderer.domElement);
+
+    // Setup scene
+    const scene = new THREE.Scene();
+    scene.add(Globe);
+    scene.add(new THREE.AmbientLight(0xbbbbbb));
+    scene.add(new THREE.DirectionalLight(0xffffff, 0.6));
+
+    // Setup camera
+    const camera = new THREE.PerspectiveCamera();
+    camera.aspect = window.innerWidth/ window.innerHeight;
+    camera.updateProjectionMatrix();
+    camera.position.z = 500;
+
+    // Add camera controls
+    const tbControls = new THREE.TrackballControls(camera, renderer.domElement);
+    tbControls.minDistance = 101;
+    tbControls.rotateSpeed = 5;
+    tbControls.zoomSpeed = 0.8;
+
+    // Kick-off renderer
+    (function animate() { // IIFE
+      // Frame cycle
+      tbControls.update();
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    })();
+  });
+</script>
+</body>
