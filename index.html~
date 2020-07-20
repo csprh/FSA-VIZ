@@ -16,16 +16,19 @@
   <script src="//unpkg.com/three/examples/js/controls/TrackballControls.js"></script>
   <script src="//unpkg.com/three-globe"></script>
   
-    <!-- load data in this data script -->
+<style>
+</style>
 </head>
 <body>
 <button onclick="myFunction()">Try it</button>
  
 <!--Create a <div> where the globe will be rendered -->
 
-<div id="globeViz"></div>
 <div id="globalArea"></div>
-<script>
+
+<div id="globeViz"></div>
+
+<!--<script>
 myFunction();
 function myFunction() {
   var x = document.getElementById("globeViz");
@@ -35,7 +38,7 @@ function myFunction() {
     x.style.display = "none";
   }
 }
-</script>
+</script>-->
 
 </body>
 
