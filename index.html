@@ -22,10 +22,11 @@
 <button onclick="myFunction()">Try it</button>
  
 <!--Create a <div> where the globe will be rendered -->
-<div id="globalArea"></div>
-<div id="globeViz"></div>
 
+<div id="globeViz"></div>
+<div id="globalArea"></div>
 <script>
+myFunction();
 function myFunction() {
   var x = document.getElementById("globeViz");
   if (x.style.display === "none") {
@@ -38,7 +39,7 @@ function myFunction() {
 
 </body>
 
-	<script>
+<script>
 
 		// Get the container to hold the IO globe
 var container = document.getElementById( "globalArea" );
