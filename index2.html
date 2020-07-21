@@ -1,5 +1,52 @@
 <head>
 <style>
+
+html {
+  font: normal 100%/1.5 Georgia,serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #e2e2e2;
+  padding: 1em 0;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.nav a {
+  color: #fff;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  background-color: #666;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: #000;
+}
+
+.nav .current {
+  background-color: red;
+}
+
 html, body {
 
     height: 100%;
@@ -40,7 +87,22 @@ a {
   <script src="//unpkg.com/three/examples/js/controls/TrackballControls.js"></script>
   <script src="//unpkg.com/three-globe"></script>
   <!--<script src="../../dist/three-globe.js"></script>-->
+
+  <link href="css/inline-list.css" rel="stylesheet">
 </head>
+
+<header>
+  <h1>About · Website Name</h1>
+  <nav>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products/">Products</a></li>
+      <li><a class="current" href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 
 <body>
 <div id="globeViz"></div>
