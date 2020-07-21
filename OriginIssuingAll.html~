@@ -107,6 +107,9 @@ a {
       <li><a class="current" href="OriginIssuingAll.html">Origin/Issuing Country Links</a></li>
       <li><a href="OriginAll.html">Origin Country</a></li>
       <li><a href="IssuingAll.html">Issuing Country</a></li>
+      <li><a href="OriginIssuingSal.html">Origin/Issuing Country Links: Salmonella</a></li>
+      <li><a href="OriginSal.html">Origin Country: Salmonella</a></li>
+      <li><a href="IssuingSal.html">Issuing Country: Salmonella</a></li>
     </ul>
   </nav>
 </header>
