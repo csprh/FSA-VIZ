@@ -97,7 +97,8 @@ a {
     <ul class="nav">
       <li><a href="OriginIssuingAll.html">Origin/Issuing Country Links</a></li>
       <li><a href="OriginAll.html">Origin Country</a></li>
-      <li><a class="current" href="IssuingAll.html">Issuing Country</a></li>
+      <li><a href="IssuingAll.html">Issuing Country</a></li>
+      <li><a class="current" href="about.html">About</a></li>
     </ul>
   </nav>
 </header>
