@@ -104,7 +104,9 @@ a {
   Click on a country to show the visualisation of the data.  Arrows going
   from selected country show the selected country is the Origin of the data
   point and the destination is the issuing country.  Inward arrows show the
-  converse relationship. 
+  converse relationship.  The number of moving glowing points on each
+  connection is an indicator of the amount of data points in the
+  four years covered. 
   <nav>
     <ul class="nav">
       <li><a class="current" href="OriginIssuingAll.html">Origin/Issuing Country Links</a></li>
