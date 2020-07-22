@@ -99,7 +99,12 @@ a {
 </head>
 
 <header>
-  <h1>FSA / Jean Golding Institude Food Hazard Data Visualisation Competition</h1>
+  <h1>FSA/JGI Food Hazard Data Visualisation Competition: Dr Paul Hill</h1>
+  This is an interactive globe showing FSA food hazard data from 2016 to 2020.
+  Click on a country to show the visualisation of the data.  Arrows going
+  from selected country show the selected country is the Origin of the data
+  point and the destination is the issuing country.  Inward arrows show the
+  converse relationship. 
   <nav>
     <ul class="nav">
       <li><a class="current" href="OriginIssuingAll.html">Origin/Issuing Country Links</a></li>
