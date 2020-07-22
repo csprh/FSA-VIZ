@@ -138,7 +138,10 @@ a {
 <body>
  
 <!--Create a <div> where the globe will be rendered -->
-<div id="globalArea"></div>
+  <div class="container">
+      <div id="globalArea"></div>
+  </div>
+
 </body>
 
 

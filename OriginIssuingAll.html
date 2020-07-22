@@ -47,13 +47,23 @@ h1 {
 }
 body {
     position: absolute;
+
+
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    position: absolute;
     left: 30%;
 
     height: 100%;
     width: 70%;
     margin: 0;
     padding: 0;
-
 }
 
 html {
@@ -68,7 +78,6 @@ html {
 header {
 
     position: relative;
-    left: 0%;
     width: 30%;
     height: 20%;
     line-height: 40px;
@@ -139,7 +148,10 @@ a {
 <body>
  
 <!--Create a <div> where the globe will be rendered -->
-<div id="globalArea"></div>
+  <div class="container">
+      <div id="globalArea"></div>
+  </div>
+
 </body>
 
 
