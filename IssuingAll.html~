@@ -156,6 +156,7 @@ function getH() {
 
   thisCountry = countries.features[ii].properties.ISO_A2;
   var output = 0;
+  ouput = 0;
   for (let i = 0; i<data.length;i++){
       if (thisCountry === data[i].i){
            output = output + data[i].v;
