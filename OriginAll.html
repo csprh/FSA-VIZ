@@ -2,7 +2,18 @@
 <style>
 
 html {
+  background-color: #000000;
   font: normal 100%/1.5 Georgia,serif;
+}
+
+.container {
+    position: absolute;
+    left: 30%;
+
+    height: 100%;
+    width: 70%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -92,20 +103,37 @@ a {
 </head>
 
 <header>
-  <h1>FSA / Jean Golding Institude Food Hazard Data Visualisation Competition</h1>
-  <nav>
+  <h1>FSA/JGI Food Hazard Data Visualisation Competition: Dr Paul Hill</h1>
+    <nav>
     <ul class="nav">
       <li><a href="OriginIssuingAll.html">Origin/Issuing Country Links</a></li>
       <li><a class="current" href="OriginAll.html">Origin Country</a></li>
       <li><a href="IssuingAll.html">Issuing Country</a></li>
-      <li><a href="about.html">About</a></li>
+    
     </ul>
   </nav>
+  This is an interactive globe showing FSA food hazard data from 2016 to 2020.
+
+  <ul style="text-align: left;">
+  <li>Click on a country to show the visualisation of the data</li>
+  <li>Arrows going
+  from selected country show the selected country is the Origin of the data
+  point and the destination is the issuing country</li>
+  <li>Inward arrows show the
+  converse relationship</li>
+  <li>Hold mouse down to rotate globe</li>
+  <li> The number of moving glowing points on each
+  connection is an indicator of the amount of data points in the
+  four years covered</li>
+</ul>
 </header>
 
-
 <body>
-<div id="globeViz"></div>
+<div class="container">
+      <div id="globeViz"></div>
+</div>
+
+
 
 <script>
  fetch('https://raw.githack.com/csprh/FSA-VIZ/master/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries =>
