@@ -78,7 +78,7 @@ header {
 
     position: relative;
     width: 30%;
-    height: 20%;
+    height: 1%;
     line-height: 40px;
     text-align: center;
     color: white;
