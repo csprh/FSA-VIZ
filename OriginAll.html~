@@ -2,10 +2,10 @@
 <style>
 
 html {
-  background-color: #000000;
   font: normal 100%/1.5 Georgia,serif;
+  background-color: #000000;
+  padding: 1em 0;
 }
-
 
 body {
   margin: 0;
@@ -104,6 +104,9 @@ a {
 
 
  </style>
+
+     <meta charset="UTF-8">
+    <title>FSA Data Demo: Origin Country</title>
    <script src="https://raw.githack.com/csprh/FSA-VIZ/master/jsonWhole.js"></script>
   <script src="//unpkg.com/three"></script>
   <script src="//unpkg.com/three/examples/js/controls/TrackballControls.js"></script>
@@ -125,17 +128,9 @@ a {
   </nav>
   This is an interactive globe showing FSA food hazard data from 2016 to 2020.
 
-  <ul style="text-align: left;">
-  <li>Click on a country to show the visualisation of the data</li>
-  <li>Arrows going
-  from selected country show the selected country is the Origin of the data
-  point and the destination is the issuing country</li>
-  <li>Inward arrows show the
-  converse relationship</li>
+<ul style="text-align: left;">
+  <li>The elevation of each country illustrates the number of data events that originated there</li>
   <li>Hold mouse down to rotate globe</li>
-  <li> The number of moving glowing points on each
-  connection is an indicator of the amount of data points in the
-  four years covered</li>
 </ul>
 </header>
 
@@ -143,7 +138,7 @@ a {
 <div class="container">
       <div id="globeViz"></div>
 </div>
-
+</body>
 
 
 <script>
