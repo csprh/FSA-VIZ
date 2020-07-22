@@ -110,12 +110,19 @@ a {
 <header>
   <h1>FSA/JGI Food Hazard Data Visualisation Competition: Dr Paul Hill</h1>
   This is an interactive globe showing FSA food hazard data from 2016 to 2020.
-  Click on a country to show the visualisation of the data.  Arrows going
+
+  <ul>
+  <li>Click on a country to show the visualisation of the data</li>
+  <li>Arrows going
   from selected country show the selected country is the Origin of the data
-  point and the destination is the issuing country.  Inward arrows show the
-  converse relationship.  The number of moving glowing points on each
+  point and the destination is the issuing country.</li>
+  <li>Inward arrows show the
+  converse relationship.</li>
+  <li> The number of moving glowing points on each
   connection is an indicator of the amount of data points in the
-  four years covered. 
+  four years covered</li>
+</ul>
+        
   <nav>
     <ul class="nav">
       <li><a class="current" href="OriginIssuingAll.html">Origin/Issuing Country Links</a></li>
