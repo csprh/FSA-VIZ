@@ -67,7 +67,7 @@ html {
 
 header {
 
-    position: absolute;
+    position: relative;
     width: 30%;
     height: 20%;
     line-height: 40px;
